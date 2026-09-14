@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Play&family=Press+Start+2P&family=Silkscreen&display=swap');
+
+/* =========================================
+   1. PENGATURAN GLOBAL (BODY & TEKS)
+   ========================================= */
+:root {
+    --primary-color: #00a6ff;
+    --bg-light: #ffffff;
+    --text-dark: #121212;
+    --bg-aside: #ffde59;
+    --bg-contact: #ff914d;
+}
+   body {
+    background-color: #ffffff;
+    color: #121212;
+    min-height: 100vh;
+    transition: 0.3s;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/*p {
+    text-align: justify;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+}
+*/
+
+h2 {
+    font-family: 'Silkscreen', cursive;
+    text-align: center;
+    font-size: 20px;
+    background-color: #00a6ff;
+    border-style: ridge;
+    border-radius: 50px;
+    color: #ffffff;
+}
+
+button {
+    width: 100px;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Silkscreen', cursive;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+article p{
+    text-align: justify;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+}
+
+/* =========================================
+   2. PENGATURAN MODE GELAP (DARK MODE)
+   ========================================= */
+#mode {
+    display: none;
+}
+
+.ubah-warna {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #00a6ff;
+    color: #121212;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 10px;
+    height: auto;
+    border: none;
+    box-shadow: 0 4px 6px rgba(red, green, blue, alpha);
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    font-family: 'Silkscreen', cursive;
+}
+.ubah-warna:hover{
+    background-color: #0084cc;
+    transform: translateY(-2px);
+}
+
+body:has(#mode:checked) {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body:has(#mode:checked) .ubah-warna {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body:has(#mode:checked) #kontak {
+    background-color:#4a1c03;
+    color: #ffffff;
+}
+
+body:has(#mode:checked) #kontak label {
+    color: #e0e0e0;
+}
+
+body:has(#mode:checked) aside {
+    background-color: #453c0a;
+    color: #ffffff;
+}
+body:has(#mode:checked) nav #info{
+    color: #ffffff;
+}
+body:has(#mode:checked) nav a{
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+body:has(#mode:checked) nav a:hover{
+    background-color: #555555;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+/* =========================================
+   3. HEADER & NAVIGASI
+   ========================================= */
+header {
+    background-color: #00a6ff;
+    border-radius: 50px;
+    border-style: ridge;
+    text-align: center;
+    font-family: 'Silkscreen', cursive;
+    padding: 20px;
+    color: #ffffff;
+}
+
+header p {
+    text-align: center;
+    font-family: 'Silkscreen', cursive;
+}
+
+/*@media screen and (max-width:768px) {
+    nav{
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+        margin-top: 3vh;
+        width: 100%;
+    }
+
+    nav a{
+        font-size: 2.5vh;
+        width: 80%;
+        padding: 1.5vh 0;
+        border-bottom: 1px solid #00a6ff;
+    }
+} */
+
+nav {
+    text-align: center;
+    background-color: transparent; 
+    padding: 15px 0;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 15px;
+}
+
+nav a{
+    color:#121212;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.info ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display:flex;
+    gap: 50px;
+}
+.info{
+    color: #555555;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+.info a:hover{
+    color: #007bff;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+/* =========================================
+   4. KONTEN UTAMA & MEDIA (GAMBAR)
+   ========================================= */
+figure img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
+    border: 4px groove #00a6ff;
+    object-fit: cover;
+    display: inline-block;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.foto{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figcaption {
+    margin: 20px auto;
+    font-size: 15px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.infofoto{
+    text-align: center;
+}
+
+#riwayat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+}
+
+#pengalaman {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+}
+
+#pengalaman ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+#pengalaman li {
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+
+/* =========================================
+   5. ASIDE (KOLOM SAMPING)
+   ========================================= */
+aside {
+    background-color: #ffde59;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: oblique;
+    padding: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+aside input[type="range"],
+aside textarea {
+    height: 10px;
+    margin-top: 20px;
+}
+
+/* =========================================
+   6. FORMULIR KONTAK
+   ========================================= */
+#kontak {
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ff914d;
+    border-radius: 16px;
+    padding: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#kontak label {
+    display: flex;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s;
+}
+
+#kontak input[type="text"],
+#kontak input[type="email"],
+#kontak textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #00a6ff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#kontak input:focus,
+#kontak textarea:focus {
+    outline: none;
+    border-color: #00a6ff;
+}
+
+#kontak button:hover {
+    background-color: antiquewhite;
+}
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
+footer p {
+    font-size: 10px;
+    text-align: center;
+}
